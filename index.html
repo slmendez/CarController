@@ -59,7 +59,13 @@
 	</header>
 	<br>
 
+	<a href="" id="ipaddress">IP ADDRESS NOT INPUTTED</a>
+	<br>
+	<input type="text" id="userInput" value="Enter IP Address"/>
+	<input type="button" onclick="javascript:changeIPAddress()" value="Submit" />
 	
+	<br>
+	<br>
 	<div class="center">
 	<button type="button" id="button-f" class="btn btn-success .btn-md" href="#"><h1>&#8679;</h1></button>
 	</div>
@@ -95,7 +101,7 @@
 		})();
 		(function() {
 		    document.getElementById("button-l").onclick = function() {
-		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224L010&submit=Submit");
+		    var open_win = window.open(ipaddress.href);
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -120,5 +126,11 @@
 		    return false;
 		  };
 		})();
+		function changeIPAddress(){
+			var userInput = document.getElementById("userInput").value;
+			var ipaddress = document.getElementById("ipaddress");
+			ipaddress.href = "http://" + userInput + "/output.cgi?text=*1224F010&submit=Submit";
+			ipaddress.innerHTML = ipaddress.href;
+		}
 	</script>
 	<!-- -->
