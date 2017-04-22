@@ -59,7 +59,7 @@
 	</header>
 	<br>
 
-	<a href="" id="ipaddress">IP ADDRESS NOT INPUTTED</a>
+	<a href="" id="ipaddress">IP ADDRESS NOT INPUTTED</a> 
 	<br>
 	<input type="text" id="userInput" value="Enter IP Address"/>
 	<input type="button" onclick="javascript:changeIPAddress()" value="Submit" />
@@ -92,7 +92,7 @@
 	<script>
 		(function() {
 		    document.getElementById("button-f").onclick = function() {
-		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
+		    var open_win = window.open(ipaddressF.href);
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -101,7 +101,7 @@
 		})();
 		(function() {
 		    document.getElementById("button-l").onclick = function() {
-		    var open_win = window.open(ipaddress.href);
+		    var open_win = window.open(ipaddressL.href);
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -110,7 +110,7 @@
 		})();
 		(function() {
 		    document.getElementById("button-r").onclick = function() {
-		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224R010&submit=Submit");
+		    var open_win = window.open(ipaddressR.href);
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -119,7 +119,7 @@
 		})();
 		(function() {
 		    document.getElementById("button-b").onclick = function() {
-		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224B010&submit=Submit");
+		    var open_win = window.open(ipaddressB.href);
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -128,9 +128,15 @@
 		})();
 		function changeIPAddress(){
 			var userInput = document.getElementById("userInput").value;
-			var ipaddress = document.getElementById("ipaddress");
-			ipaddress.href = "http://" + userInput + "/output.cgi?text=*1224F010&submit=Submit";
-			ipaddress.innerHTML = ipaddress.href;
+			var ipaddressF = document.getElementById("ipaddress");
+			var ipaddressR = document.getElementById("ipaddress");
+			var ipaddressL = document.getElementById("ipaddress");
+			var ipaddressB = document.getElementById("ipaddress");
+			ipaddressF.href = "http://" + userInput + "/output.cgi?text=*1224F010&submit=Submit";
+			ipaddressR.href = "http://" + userInput + "/output.cgi?text=*1224R010&submit=Submit";
+			ipaddressL.href = "http://" + userInput + "/output.cgi?text=*1224L010&submit=Submit";
+			ipaddressB.href = "http://" + userInput + "/output.cgi?text=*1224B010&submit=Submit";
+			ipaddress.innerHTML = "IP ADDRESS SUBMITTED: " + userInput;
 		}
 	</script>
 	<!-- -->
