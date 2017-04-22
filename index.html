@@ -36,12 +36,18 @@
 	<p id="project-name">Project 10 </p>
 	</header>
 	<br>
-	<a id="button" href="http://10.139.196.134/output.cgi?text=*1224F010&submit=Submit"> Forward</a>
+	<a id="button" href="#"> Forward</a>
 
 	<script>
-	$(document).ready(function(){
-		$("a").click(function(event){
-			event.preventDefault();
-		});
-	});
+		(function() {
+
+		    document.getElementById("button").onclick = function() {
+		    var open_win = window.open("http://10.139.196.134/output.cgi?text=*1224F010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 5000);
+		    return false;
+		  };
+
+		})();
 	</script>
