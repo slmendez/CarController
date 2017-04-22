@@ -20,12 +20,11 @@
 		text-align: center;
 		margin: 0 auto;		
 	}
-	.center{
-		text-align: center;
-		margin: 0 auto;
-	}
 	#button{
-
+		font-size: 14px;
+ 	    color: black;
+  		padding: 12px;
+  		line-height: 250%;
 	}
 </style>
 <br>
@@ -34,21 +33,19 @@
 	<header class="header">
 	<p id="project-title">CAR CONTROLLER</p>
 	<br>
-	<p id="project-name">Project 10</p>
+	<p id="project-name">Project 10 </p>
 	</header>
 	<br>
-	<a id = "button" class="btn btn-sucess center" href="#" role="button">Forward</a>
+	<a id="button" href="#"> Forward</a>
 
 	<script>
 		(function() {
-
-		    document.getElementByID("button").onclick = function() {
-		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
+		    document.getElementById("button").onclick = function() {
+		    var open_win = window.open("http://10.139.196.134/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
-		    }, 800);
+		    }, 1000);
 		    return false;
 		  };
-
 		})();
 	</script>
