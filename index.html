@@ -37,9 +37,11 @@
 	</header>
 	<br>
 	<a id="button" href="http://10.139.196.134/output.cgi?text=*1224F010&submit=Submit"> Forward</a>
-	
+
 	<script>
-	$('#button a').click(function(e){
-		e.preventDefault();
+	$(document).ready(function(){
+		$("#button a").click(function(event){
+			event.preventDefault();
+		});
 	});
 	</script>
