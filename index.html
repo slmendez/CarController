@@ -27,8 +27,11 @@
   		line-height: 250%;
 	}
 	.center{
-		text-aling: center;
+		text-align: center;
 		margin: 0 auto;
+	}
+	#button{
+
 	}
 </style>
 <br>
@@ -40,12 +43,12 @@
 	<p id="project-name">Project 10</p>
 	</header>
 	<br>
-	<a class="btn btn-sucess center" href="#" role="button">Forward</a>
+	<a id = "button" class="btn btn-sucess center" href="#" role="button">Forward</a>
 
 	<script>
 		(function() {
 
-		    document.getElementByClassName("btn").onclick = function() {
+		    document.getElementByID("button").onclick = function() {
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
