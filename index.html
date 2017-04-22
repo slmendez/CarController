@@ -48,6 +48,12 @@
   		padding-right: 20px;
   		padding-left: 20px;
 	}
+	#button-d{
+		font-size: 14px;
+ 	    color: black;
+  		padding-right: 20px;
+  		padding-left: 20px;
+	}
 </style>
 <br>
 <br>
@@ -57,13 +63,6 @@
 	<br>
 	<p id="project-name">Project 10 </p>
 	</header>
-	<br>
-
-	<a href="" id="ipaddress">IP ADDRESS NOT INPUTTED</a> 
-	<br>
-	<input type="text" id="userInput" value="Enter IP Address"/>
-	<input type="button" onclick="javascript:changeIPAddress()" value="Submit" />
-	
 	<br>
 	<br>
 	<div class="center">
@@ -82,17 +81,21 @@
 	&nbsp;
 	&nbsp;
 	&nbsp;
+	&nbsp;
+	&nbsp;
 	<button type="button" id="button-r" class="btn btn-success .btn-md" href="#"><h1>&#8680;</h1></button>
 	</div>
 	<br>
 	<div class="center">
 	<button type="button" id="button-b" class="btn btn-success .btn-md" href="#"><h1>&#8681;</h1></button>
 	</div>
-
+	<br>
+	<br>
+	<button type="button" id="button-d" class="btn btn-success .btn-md" href="#"><h1>DETECT</h1></button>
 	<script>
 		(function() {
 		    document.getElementById("button-f").onclick = function() {
-		    var open_win = window.open(ipaddressF.href);
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -101,7 +104,7 @@
 		})();
 		(function() {
 		    document.getElementById("button-l").onclick = function() {
-		    var open_win = window.open(ipaddressL.href);
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224L010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -110,7 +113,7 @@
 		})();
 		(function() {
 		    document.getElementById("button-r").onclick = function() {
-		    var open_win = window.open(ipaddressR.href);
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224R010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
@@ -119,24 +122,21 @@
 		})();
 		(function() {
 		    document.getElementById("button-b").onclick = function() {
-		    var open_win = window.open(ipaddressB.href);
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224B010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
 		    return false;
 		  };
 		})();
-		function changeIPAddress(){
-			var userInput = document.getElementById("userInput").value;
-			var ipaddressF = document.getElementById("ipaddress");
-			var ipaddressR = document.getElementById("ipaddress");
-			var ipaddressL = document.getElementById("ipaddress");
-			var ipaddressB = document.getElementById("ipaddress");
-			ipaddressF.href = "http://" + userInput + "/output.cgi?text=*1224F010&submit=Submit";
-			ipaddressR.href = "http://" + userInput + "/output.cgi?text=*1224R010&submit=Submit";
-			ipaddressL.href = "http://" + userInput + "/output.cgi?text=*1224L010&submit=Submit";
-			ipaddressB.href = "http://" + userInput + "/output.cgi?text=*1224B010&submit=Submit";
-			ipaddress.innerHTML = "IP ADDRESS SUBMITTED: " + userInput;
-		}
+		(function() {
+		    document.getElementById("button-d").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224D010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
 	</script>
 	<!-- -->
