@@ -38,6 +38,21 @@
  	    color: black;
   		padding: 10px;
   		line-height: 200%;
+  		outline-width: 200%;
+	}
+	#button-r{
+		font-size: 14px;
+ 	    color: black;
+  		padding: 10px;
+  		line-height: 200%;
+  		outline-width: 200%;
+	}
+	#button-b{
+		font-size: 14px;
+ 	    color: black;
+  		padding: 10px;
+  		line-height: 200%;
+  		outline-width: 200%;
 	}
 </style>
 <br>
@@ -53,6 +68,8 @@
 	<br>
 	<br>
 	<button type="button" id="button-l" class="btn btn-success .btn-md" href="#">Left</button>
+	<button type="button" id="button-r" class="btn btn-success .btn-md" href="#">Right</button>
+	<button type="button" id="button-b" class="btn btn-success .btn-md" href="#">Back</button>
 
 
 	<script>
@@ -61,7 +78,7 @@
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
-		    }, 200);
+		    }, 300);
 		    return false;
 		  };
 		})();
@@ -70,7 +87,25 @@
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224L010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
-		    }, 200);
+		    }, 300);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-r").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224R010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 300);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-b").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224B010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 300);
 		    return false;
 		  };
 		})();
