@@ -26,6 +26,10 @@
   		padding: 12px;
   		line-height: 250%;
 	}
+	.center{
+		text-aling: center;
+		margin: 0 auto;
+	}
 </style>
 <br>
 <br>
@@ -33,19 +37,19 @@
 	<header class="header">
 	<p id="project-title">CAR CONTROLLER</p>
 	<br>
-	<p id="project-name">Project 10 </p>
+	<p id="project-name">Project 10</p>
 	</header>
 	<br>
-	<a id="button" href="#"> Forward</a>
+	<a class="btn btn-sucess center" href="#" role="button">Forward</a>
 
 	<script>
 		(function() {
 
-		    document.getElementById("button").onclick = function() {
+		    document.getElementByClassName("btn").onclick = function() {
 		    var open_win = window.open("http://10.139.196.134/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
-		    }, 1000);
+		    }, 800);
 		    return false;
 		  };
 
