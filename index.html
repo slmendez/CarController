@@ -23,11 +23,21 @@
 	#button{
 		font-size: 14px;
  	    color: black;
-  		padding: 12px;
-  		line-height: 250%;
+  		padding: 10px;
+  		line-height: 200%;
 	}
 	.btn {
 		backgroud-color: green;
+	}
+	.center {
+		text-align: center;
+		margin: 0 auto;
+	}
+	#button-l{
+		font-size: 14px;
+ 	    color: black;
+  		padding: 10px;
+  		line-height: 200%;
 	}
 </style>
 <br>
@@ -39,7 +49,10 @@
 	<p id="project-name">Project 10 </p>
 	</header>
 	<br>
-	<button type="button" id="button" class="btn btn-success .btn-md" href="#"> Forward</button>
+	<button type="button" id="button" class="btn btn-success .btn-md center" href="#">Forward</button>
+	<br>
+	<button type="button-l" id="button" class="btn btn-success .btn-md" href="#">Left</button>
+
 
 	<script>
 		(function() {
@@ -47,7 +60,16 @@
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
-		    }, 500);
+		    }, 300);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-l").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224L010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 300);
 		    return false;
 		  };
 		})();
