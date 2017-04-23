@@ -21,15 +21,15 @@
 		text-align: center;
 		margin: 0 auto;		
 	}
+	.center {
+		text-align: center;
+		margin: auto;
+	}
 	#button-f{
 		font-size: 14px;
  	    color: black;
   		padding-right: 20px;
   		padding-left: 20px;
-	}
-	.center {
-		text-align: center;
-		margin: auto;
 	}
 	#button-l{
 		font-size: 14px;
@@ -49,7 +49,7 @@
   		padding-right: 20px;
   		padding-left: 20px;
 	}
-	#button-d{
+	#button-d #button-h #button-s{
 		font-size: 14px;
  	    color: black;
   		padding-right: 20px;
@@ -65,14 +65,12 @@
 	<p id="project-name">Project 10 </p>
 	</header>
 	<br>
-
-	
 	<div class="center">
-	<button type="button" id="button-f" class="btn btn-success .btn-md" href="#"><h1>&#8679;</h1></button>
+	<button type="button" id="button-f" class="btn btn-success .btn-lg" href="#"><h1>&#8679;</h1></button>
 	</div>
 	<br>
 	<div class="center">
-	<button type="button" id="button-l" class="btn btn-success .btn-md" href="#"><h1>&#8678;</h1></button>
+	<button type="button" id="button-l" class="btn btn-success .btn-lg" href="#"><h1>&#8678;</h1></button>
 	&nbsp;
 	&nbsp;
 	&nbsp;
@@ -83,16 +81,33 @@
 	&nbsp;
 	&nbsp;
 	&nbsp;
-	<button type="button" id="button-r" class="btn btn-success .btn-md" href="#"><h1>&#8680;</h1></button>
+	<button type="button" id="button-r" class="btn btn-success .btn-lg" href="#"><h1>&#8680;</h1></button>
 	</div>
 	<br>
 	<div class="center">
-	<button type="button" id="button-b" class="btn btn-success .btn-md" href="#"><h1>&#8681;</h1></button>
+	<button type="button" id="button-b" class="btn btn-success .btn-lg" href="#"><h1>&#8681;</h1></button>
 	</div>
 	<br>
 	<br>
-	<button type="button" id="button-d" class="btn btn-success .btn-md" href="#"><h1>DETECT</h1></button>
-
+	<div class="center">
+	<button type="button" id="button-d" class="btn btn-primary .btn-md" href="#"><h1>DETECT</h1></button>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<button type="button" id="button-h" class="btn btn-danger .btn-md" href="#"><h1>RESET</h1></button>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<button type="button" id="button-s" class="btn btn-warning .btn-md" href="#"><h1>STOP</h1></button>
+	</div>
 
 	<script>
 		(function() {
@@ -134,6 +149,24 @@
 		(function() {
 		    document.getElementById("button-d").onclick = function() {
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224D010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-h").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224H010&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-s").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224S020&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
