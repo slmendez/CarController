@@ -13,6 +13,9 @@
 		font-size: 40px;
 		color: black;
 	}
+	.control {
+		display: inline-block;
+	}
 	#project-name{
 		font-size: 25px;
 		color: grey;
@@ -28,32 +31,75 @@
 	#button-f{
 		font-size: 14px;
  	    color: black;
-  		padding-right: 20px;
-  		padding-left: 20px;
+  		padding-right: 25px;
+  		padding-left: 25px;
 	}
 	#button-l{
 		font-size: 14px;
  	    color: black;
-  		padding-right: 15px;
+ 	    padding-top: 0px;
+  		padding-right: 20px;
   		padding-left: 15px;
+  		padding-bottom: 15px;
 	}
 	#button-r{
 		font-size: 14px;
  	    color: black;
-  		padding-right: 15px;
-  		padding-left: 15px;
-	}
+ 	    padding-top: 0px;
+  		padding-right: 20px;
+  		padding-left: 20px;
+  		padding-bottom: 15px;
+  	}
 	#button-b{
 		font-size: 14px;
  	    color: black;
+  		padding-right: 25px;
+  		padding-left: 25px;
+	}
+	#button-d{
+		font-size: 14px;
   		padding-right: 20px;
   		padding-left: 20px;
 	}
-	#button-d #button-h #button-s{
+	#button-h{
+		font-size: 14px;
+  		padding-right: 25px;
+  		padding-left: 25px;		
+	}
+	#button-s{
+		font-size: 14px;
+  		padding-right: 32px;
+  		padding-left: 32px;
+	}
+	#button-f-f{
 		font-size: 14px;
  	    color: black;
+  		padding-right: 25px;
+  		padding-left: 25px;
+	}
+	#button-l-f {
+		font-size: 14px;
+ 	    color: black;
+ 	    padding-bottom: 15px;
   		padding-right: 20px;
-  		padding-left: 20px;
+  		padding-left: 20px;		
+  		padding-top: 0px;
+	}
+	#button-r-f {
+		font-size: 14px;
+ 	    color: black;
+ 	    padding-top: 0px;
+  		padding-right: 20px;
+  		padding-left: 20px;	
+  		padding-bottom: 15px;
+	}
+	#button-b-f {
+		font-size: 14px;
+ 	    color: black;
+ 	    padding-top: 0px;
+  		padding-right: 25px;
+  		padding-left: 25px;	
+  		padding-bottom: 15px;	
 	}
 </style>
 <br>
@@ -62,35 +108,80 @@
 	<header class="header">
 	<p id="project-title">CAR CONTROLLER</p>
 	<br>
-	<p id="project-name">Project 10 </p>
+	<p id="project-name">ECE 306 Project 10 </p>
 	</header>
 	<br>
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	<div class="control" id="shift-left">
 	<div class="center">
 	<button type="button" id="button-f" class="btn btn-success .btn-lg" href="#"><h1>&#8679;</h1></button>
 	</div>
 	<br>
-	<div class="center">
 	<button type="button" id="button-l" class="btn btn-success .btn-lg" href="#"><h1>&#8678;</h1></button>
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
 	&nbsp;
 	&nbsp;
 	&nbsp;
 	&nbsp;
 	<button type="button" id="button-r" class="btn btn-success .btn-lg" href="#"><h1>&#8680;</h1></button>
-	</div>
 	<br>
 	<div class="center">
 	<button type="button" id="button-b" class="btn btn-success .btn-lg" href="#"><h1>&#8681;</h1></button>
 	</div>
+	</div>
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	<!--second set of buttons  -->
+	<div class="control">
+	<div class="center">
+	<button type="button" id="button-f-f" class="btn btn-info .btn-lg" href="#"><h1>&#8679;</h1></button>
+	</div>
+	<br>
+	<button type="button" id="button-l-f" class="btn btn-info .btn-lg" href="#"><h1>&#8678;</h1></button>
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp; &nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<button type="button" id="button-r-f" class="btn btn-info .btn-lg" href="#"><h1>&#8680;</h1></button>
+	<br>
+	<div class="center">
+	<button type="button" id="button-b-f" class="btn btn-info .btn-lg" href="#"><h1>&#8681;</h1></button>
+	</div>
+	</div>
+	<!-- -->
+
 	<br>
 	<br>
 	<div class="center">
-	<button type="button" id="button-d" class="btn btn-primary .btn-md" href="#"><h1>DETECT</h1></button>
+	<button type="button" id="button-d" class="btn btn-primary .btn-md" href="#"><h2>DETECT</h2></button>
 	&nbsp;
 	&nbsp;
 	&nbsp;
@@ -98,7 +189,7 @@
 	&nbsp;
 	&nbsp;
 	&nbsp;
-	<button type="button" id="button-h" class="btn btn-danger .btn-md" href="#"><h1>RESET</h1></button>
+	<button type="button" id="button-h" class="btn btn-danger .btn-md" href="#"><h2>RESET</h2></button>
 	&nbsp;
 	&nbsp;
 	&nbsp;
@@ -106,7 +197,7 @@
 	&nbsp;
 	&nbsp;
 	&nbsp;
-	<button type="button" id="button-s" class="btn btn-warning .btn-md" href="#"><h1>STOP</h1></button>
+	<button type="button" id="button-s" class="btn btn-warning .btn-md" href="#"><h2>STOP</h2></button>
 	</div>
 	<br>
 	<br>
@@ -116,6 +207,7 @@
 	<br>
 	<script>
 		(function() {
+			//forward, left, right, baclward button functions at one sec
 		    document.getElementById("button-f").onclick = function() {
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F010&submit=Submit");
 		    setTimeout(function() {
@@ -150,6 +242,7 @@
 		    }, 400);
 		    return false;
 		  };
+		//detect line, hardware reset, stop button functions
 		})();
 		(function() {
 		    document.getElementById("button-d").onclick = function() {
@@ -172,6 +265,43 @@
 		(function() {
 		    document.getElementById("button-s").onclick = function() {
 		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F040*1224S020&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
+		//forward, left, right, backward button functions for 2 sec
+		(function() {
+		    document.getElementById("button-f-f").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224F020&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-l-f").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224L020&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-r-f").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224R020&submit=Submit");
+		    setTimeout(function() {
+		      open_win.close();
+		    }, 400);
+		    return false;
+		  };
+		})();
+		(function() {
+		    document.getElementById("button-b-f").onclick = function() {
+		    var open_win = window.open("http://10.139.71.15/output.cgi?text=*1224B020&submit=Submit");
 		    setTimeout(function() {
 		      open_win.close();
 		    }, 400);
